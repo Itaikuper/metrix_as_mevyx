@@ -18,6 +18,12 @@
   min-height: 100vh;
 }
 
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 2rem 0.5rem;
+  }
+}
+
 .main-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -151,6 +157,7 @@
   margin-bottom: 6rem;
   width: 100%;
   max-width: 1000px;
+  box-sizing: border-box;
 }
 
 .subtitle-large {
@@ -261,6 +268,13 @@
   text-align: center;
   border-radius: 1rem;
   width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .contact-container {
+    padding: 2rem 1rem;
+  }
 }
 
 .contact-text {
