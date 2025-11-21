@@ -202,7 +202,7 @@ function App() {
               Mevyx is available to vetted organizations. Request a confidential demo or discuss custom training solutions.
             </p>
             <div className="contact-actions">
-              <a href="mailto:contact@mevyx.com" className="btn-matrix">
+              <a href="mailto:itaikupers@gmail.com" className="btn-matrix">
                 <Mail size={18} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
                 REQUEST ACCESS
               </a>
