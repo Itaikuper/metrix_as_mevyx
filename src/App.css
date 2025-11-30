@@ -60,7 +60,7 @@
 
 @media (min-width: 768px) {
   .cards-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -211,6 +211,11 @@
   color: #fff;
 }
 
+.bg-glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
 .card-text {
   color: #9ca3af;
   font-size: 1rem;
@@ -224,6 +229,10 @@
   align-items: center;
   text-align: center;
   height: 100%;
+}
+
+.domain-card .btn-matrix {
+  margin-top: auto;
 }
 
 .card-subtitle {

@@ -50,18 +50,20 @@ function App() {
           <div className="logo-container">
             <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="main-logo" />
           </div>
-          <h1 className="title text-neon glitch-text" data-text="MEVYX">MEVYX</h1>
-          <h2 className="subtitle-large">MASTERING THE HUMAN ELEMENT</h2>
-          <p className="hero-description">
-            Train for the moments that matter. Our AI-powered human simulator creates realistic scenarios
-            where you practice reading people, making critical decisions, and mastering the skills machines can't replicate.
-          </p>
+          <div className="bg-glass border-neon p-8 rounded-lg max-w-4xl mx-auto mt-8">
+            <h1 className="title text-neon glitch-text" data-text="MEVYX">MEVYX</h1>
+            <h2 className="subtitle-large">MASTERING THE HUMAN ELEMENT</h2>
+            <p className="hero-description">
+              Train for the moments that matter. Our AI-powered human simulator creates realistic scenarios
+              where you practice reading people, making critical decisions, and mastering the skills machines can't replicate.
+            </p>
+          </div>
         </motion.header>
 
         {/* Value Proposition */}
         <motion.section
           {...fadeInUp}
-          className="section value-prop"
+          className="section value-prop bg-glass border-neon p-8 rounded-lg"
         >
           <h3 className="section-title text-neon">TRAIN WHAT MACHINES CAN'T REPLACE</h3>
           <p className="section-text">
@@ -109,9 +111,8 @@ function App() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <h3 className="section-title text-neon text-center">TWO DOMAINS, ONE MISSION</h3>
           <div className="cards-container">
-            {/* Investigative Arm */}
+            {/* Human Operations Wing */}
             <motion.div
               variants={fadeInUp}
               className="domain-card bg-glass border-neon"
@@ -119,18 +120,17 @@ function App() {
               <div className="icon-wrapper">
                 <Shield size={48} className="text-neon" />
               </div>
-              <h2 className="card-title text-neon">MEVYX / OPERATIVE</h2>
-              <h3 className="card-subtitle">HUMAN PERFORMANCE UNDER PRESSURE</h3>
+              <h2 className="card-title text-neon">HUMAN OPERATIONS WING</h2>
+              <h3 className="card-subtitle">ADVANCED HUMAN DYNAMICS</h3>
               <p className="card-description">
-                Train operatives for high-stakes human interaction. From reading micro-expressions to
-                navigating complex negotiations—build skills that can't be faked.
+                Strategic interviewing. Target profiling. Rapport building.
               </p>
               <button className="btn-matrix">
                 INITIALIZE PROTOCOL <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
               </button>
             </motion.div>
 
-            {/* Commercial Arm */}
+            {/* Commercial Wing */}
             <motion.div
               variants={fadeInUp}
               className="domain-card bg-glass border-neon"
@@ -138,14 +138,31 @@ function App() {
               <div className="icon-wrapper">
                 <Briefcase size={48} className="text-neon" />
               </div>
-              <h2 className="card-title text-neon">MEVYX / COMMERCE</h2>
-              <h3 className="card-subtitle">HUMAN INTELLIGENCE IN BUSINESS</h3>
+              <h2 className="card-title text-neon">COMMERCIAL WING</h2>
+              <h3 className="card-subtitle">HIGH-STAKES NEGOTIATION</h3>
               <p className="card-description">
-                Turn your team into trusted advisors. Train executives and sales professionals to read the room,
-                handle objections naturally, and close with confidence.
+                High-end real estate negotiation. Objection handling. Closing psychology for luxury markets.
               </p>
               <button className="btn-matrix">
                 ACCESS MARKET DATA <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
+              </button>
+            </motion.div>
+
+            {/* Assessment Wing */}
+            <motion.div
+              variants={fadeInUp}
+              className="domain-card bg-glass border-neon"
+            >
+              <div className="icon-wrapper">
+                <Activity size={48} className="text-neon" />
+              </div>
+              <h2 className="card-title text-neon">ASSESSMENT WING</h2>
+              <h3 className="card-subtitle">PROFESSIONAL EVALUATION</h3>
+              <p className="card-description">
+                Professional candidate assessment. Structured interviews. HR evaluation reports.
+              </p>
+              <button className="btn-matrix">
+                START EVALUATION <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
               </button>
             </motion.div>
           </div>
@@ -161,22 +178,22 @@ function App() {
         >
           <h3 className="section-title text-neon text-center">BUILT FOR YOUR MISSION</h3>
           <div className="grid-2x2">
-            <motion.div variants={fadeInUp} className="info-item">
+            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
               <Lock className="text-neon mb-2" size={24} />
               <h4 className="info-title">CONFIDENTIALITY FIRST</h4>
               <p className="info-text">Zero-knowledge architecture for classified scenarios.</p>
             </motion.div>
-            <motion.div variants={fadeInUp} className="info-item">
+            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
               <Target className="text-neon mb-2" size={24} />
               <h4 className="info-title">MISSION-SPECIFIC</h4>
               <p className="info-text">Custom scenarios built around your real challenges.</p>
             </motion.div>
-            <motion.div variants={fadeInUp} className="info-item">
+            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
               <Users className="text-neon mb-2" size={24} />
               <h4 className="info-title">REALISTIC INTERACTIONS</h4>
               <p className="info-text">Trainee performance drives scenario difficulty.</p>
             </motion.div>
-            <motion.div variants={fadeInUp} className="info-item">
+            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
               <LineChart className="text-neon mb-2" size={24} />
               <h4 className="info-title">MEASURABLE OUTCOMES</h4>
               <p className="info-text">Quantify improvement with behavioral analytics.</p>
@@ -208,7 +225,7 @@ function App() {
             </div>
           </div>
 
-          <div className="system-status mt-8">
+          <div className="system-status mt-8 bg-glass border-neon" style={{ padding: '1rem', borderRadius: '0.5rem', display: 'inline-flex', flexDirection: 'column' }}>
             <p><Terminal size={14} style={{ display: 'inline', marginRight: '6px' }} /> SYSTEM STATUS: ONLINE | ENCRYPTION: AES-256</p>
             <p className="copyright">&copy; {new Date().getFullYear()} MEVYX. ALL RIGHTS RESERVED.</p>
           </div>
