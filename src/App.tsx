@@ -12,8 +12,7 @@ import {
   Target,
   Users,
   LineChart,
-  Mail,
-  Linkedin
+  Mail
 } from 'lucide-react';
 import './App.css';
 
@@ -49,7 +48,7 @@ function App() {
           className="main-header section"
         >
           <div className="logo-container">
-            <img src="/ChatGPT Image Nov 13, 2025, 05_55_56 PM.png" alt="MEVYX Logo" className="main-logo" />
+            <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="main-logo" />
           </div>
           <h1 className="title text-neon glitch-text" data-text="MEVYX">MEVYX</h1>
           <h2 className="subtitle-large">MASTERING THE HUMAN ELEMENT</h2>
@@ -195,20 +194,16 @@ function App() {
         >
           <div className="contact-container bg-glass border-neon">
             <div className="logo-container-small mb-6">
-              <img src="/ChatGPT Image Nov 13, 2025, 05_55_56 PM.png" alt="MEVYX Logo" className="footer-logo" />
+              <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="footer-logo" />
             </div>
             <h3 className="section-title text-neon">READY TO TRANSFORM TRAINING?</h3>
             <p className="contact-text">
               Mevyx is available to vetted organizations. Request a confidential demo or discuss custom training solutions.
             </p>
-            <div className="contact-actions">
+            <div className="contact-actions" style={{ justifyContent: 'center' }}>
               <a href="mailto:itaikupers@gmail.com" className="btn-matrix">
                 <Mail size={18} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
                 REQUEST ACCESS
-              </a>
-              <a href="https://linkedin.com/company/mevyx" target="_blank" rel="noopener noreferrer" className="btn-matrix">
-                <Linkedin size={18} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
-                CONNECT ON LINKEDIN
               </a>
             </div>
           </div>
