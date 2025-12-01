@@ -34,6 +34,13 @@ function App() {
     }
   };
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="app-container">
       <MatrixRain />
@@ -125,7 +132,7 @@ function App() {
               <p className="card-description">
                 Strategic interviewing. Target profiling. Rapport building.
               </p>
-              <button className="btn-matrix">
+              <button className="btn-matrix" onClick={scrollToContact}>
                 INITIALIZE PROTOCOL <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
               </button>
             </motion.div>
@@ -143,7 +150,7 @@ function App() {
               <p className="card-description">
                 High-end real estate negotiation. Objection handling. Closing psychology for luxury markets.
               </p>
-              <button className="btn-matrix">
+              <button className="btn-matrix" onClick={scrollToContact}>
                 ACCESS MARKET DATA <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
               </button>
             </motion.div>
@@ -161,7 +168,7 @@ function App() {
               <p className="card-description">
                 Professional candidate assessment. Structured interviews. HR evaluation reports.
               </p>
-              <button className="btn-matrix">
+              <button className="btn-matrix" onClick={scrollToContact}>
                 START EVALUATION <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
               </button>
             </motion.div>
@@ -209,7 +216,7 @@ function App() {
           transition={{ duration: 1 }}
           className="main-footer section"
         >
-          <div className="contact-container bg-glass border-neon">
+          <div id="contact-section" className="contact-container bg-glass border-neon">
             <div className="logo-container-small mb-6">
               <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="footer-logo" />
             </div>
