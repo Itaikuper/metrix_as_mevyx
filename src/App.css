@@ -20,7 +20,7 @@
 
 @media (max-width: 767px) {
   .content-wrapper {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -71,6 +71,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .feature-card {
+    padding: 1.5rem;
+  }
 }
 
 .icon-wrapper {
@@ -158,6 +164,14 @@
   width: 100%;
   max-width: 1000px;
   box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .subtitle-large {
@@ -174,6 +188,14 @@
   margin: 0 auto;
   color: #d1d5db;
   line-height: 1.6;
+  padding: 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .hero-description {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .section-title {
@@ -181,6 +203,14 @@
   font-weight: bold;
   margin-bottom: 2rem;
   letter-spacing: -1px;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.75rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .section-text {
@@ -189,6 +219,14 @@
   color: #e5e7eb;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .section-text {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .features-grid {
@@ -231,6 +269,12 @@
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .domain-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
 .domain-card .btn-matrix {
   margin-top: auto;
 }
@@ -257,7 +301,13 @@
 }
 
 .info-item {
-  padding: 1rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .info-item {
+    padding: 1.25rem;
+  }
 }
 
 .info-title {
@@ -344,4 +394,96 @@
 
 .footer-logo:hover {
   opacity: 1;
+}
+
+/* Utility Classes - Padding */
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  .p-8 {
+    padding: 1.5rem;
+  }
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Utility Classes - Margin */
+.m-4 {
+  margin: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utility Classes - Width */
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+/* Utility Classes - Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Utility Classes - Border Radius */
+.rounded-lg {
+  border-radius: 0.5rem;
 }
