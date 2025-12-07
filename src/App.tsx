@@ -1,4 +1,3 @@
-import MatrixRain from './components/MatrixRain';
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -12,16 +11,17 @@ import {
   Target,
   Users,
   LineChart,
-  Mail
+  Mail,
+  Menu
 } from 'lucide-react';
 import './App.css';
 
 function App() {
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.8, ease: "easeOut" }
   };
 
   const staggerContainer = {
@@ -43,43 +43,78 @@ function App() {
 
   return (
     <div className="app-container">
-      <MatrixRain />
+      {/* Background Elements */}
+      <div className="bg-gradient-orb orb-1"></div>
+      <div className="bg-gradient-orb orb-2"></div>
+      <div className="grid-overlay"></div>
+
+      {/* Navigation Bar */}
+      <nav className="navbar glass-panel-nav">
+        <div className="nav-content">
+          <div className="nav-logo">
+            <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX" className="nav-logo-img" />
+            <span className="nav-brand">MEVYX</span>
+          </div>
+          <div className="nav-actions">
+            <button className="btn-nav" onClick={scrollToContact}>REQUEST ACCESS</button>
+          </div>
+        </div>
+      </nav>
 
       <div className="content-wrapper">
 
         {/* Hero Section */}
         <motion.header
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="main-header section"
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="hero-section section"
         >
-          <div className="logo-container">
-            <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="main-logo" />
-          </div>
-          <div className="bg-glass border-neon p-8 rounded-lg max-w-4xl mx-auto mt-8">
-            <h1 className="title text-neon glitch-text" data-text="MEVYX">MEVYX</h1>
-            <h2 className="subtitle-large">MASTERING THE HUMAN ELEMENT</h2>
+          <div className="hero-content max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-4 px-4 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-medium tracking-wide">
+              ADVANCED BEHAVIORAL SIMULATION
+            </div>
+            <h1 className="title text-gradient">Master The Human Element</h1>
             <p className="hero-description">
-              Train for the moments that matter. Our AI-powered human simulator creates realistic scenarios
-              where you practice reading people, making critical decisions, and mastering the skills machines can't replicate.
+              The premier AI platform for simulating and assessing complex human interactions.
+              From <strong>high-stakes field scenarios</strong> to <strong>corporate leadership</strong>.
             </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <button className="btn-primary" onClick={scrollToContact}>
+                Start Assessment <ChevronRight size={16} className="ml-2 inline" />
+              </button>
+              <button className="btn-secondary" onClick={scrollToContact}>
+                View Scenarios
+              </button>
+            </div>
           </div>
         </motion.header>
 
-        {/* Value Proposition */}
+        {/* Value Proposition - Left Aligned for Professional Readability */}
         <motion.section
           {...fadeInUp}
-          className="section value-prop bg-glass border-neon p-8 rounded-lg"
+          className="section value-prop glass-panel p-12 rounded-2xl"
         >
-          <h3 className="section-title text-neon">TRAIN WHAT MACHINES CAN'T REPLACE</h3>
-          <p className="section-text">
-            Real expertise isn't learned from textbooks. It's built through experience—reading people,
-            making split-second decisions, earning trust under pressure.
-            <br /><br />
-            Mevyx creates the scenarios you can't afford to learn from mistakes. Train on realistic simulations
-            that adapt to you, preparing your team for moments where human skill decides everything.
-          </p>
+          <div className="grid-split">
+            <div className="text-content text-left">
+              <h3 className="section-title text-accent text-left">Precision in Human Dynamics</h3>
+              <p className="section-text text-left">
+                Mevyx bridges the gap between theory and reality. We provide a secure environment to practice
+                high-stakes conversations, evaluate soft skills, and train for scenarios where failure is not an option.
+              </p>
+              <ul className="feature-list mt-6 text-left">
+                <li><Target size={16} className="inline mr-2 text-accent" /> Realistic Behavioral Modeling</li>
+                <li><Lock size={16} className="inline mr-2 text-accent" /> Zero-Knowledge Privacy Architecture</li>
+                <li><BarChart3 size={16} className="inline mr-2 text-accent" /> Quantitative Performance Metrics</li>
+              </ul>
+            </div>
+            <div className="visual-content flex items-center justify-center">
+              {/* Placeholder for a future dashboard image or graphic */}
+              <div className="placeholder-graphic">
+                <Activity size={64} className="text-accent opacity-50" />
+              </div>
+            </div>
+          </div>
         </motion.section>
 
         {/* The Platform */}
@@ -90,22 +125,26 @@ function App() {
           viewport={{ once: true }}
           className="section"
         >
-          <h3 className="section-title text-neon text-center">THE MEVYX PLATFORM</h3>
+          <div className="section-header text-center mb-16">
+            <h3 className="section-title">The Mevyx Ecosystem</h3>
+            <p className="section-subtitle">Comprehensive tools for every stage of human development.</p>
+          </div>
+
           <div className="features-grid">
-            <motion.div variants={fadeInUp} className="feature-card bg-glass border-neon">
-              <div className="icon-wrapper"><Activity size={32} className="text-neon" /></div>
-              <h4 className="card-title-small">REALISM</h4>
-              <p className="card-text">Live scenarios, not scripted demos.</p>
+            <motion.div variants={fadeInUp} className="feature-card glass-panel text-left">
+              <div className="icon-wrapper"><Activity size={28} className="text-accent" /></div>
+              <h4 className="card-title-small">Dynamic Simulation</h4>
+              <p className="card-text">Unscripted, evolving scenarios for sales, service, and ops that adapt to user behavior in real-time.</p>
             </motion.div>
-            <motion.div variants={fadeInUp} className="feature-card bg-glass border-neon">
-              <div className="icon-wrapper"><Brain size={32} className="text-neon" /></div>
-              <h4 className="card-title-small">BEHAVIORAL MODELING</h4>
-              <p className="card-text">AI that reads and reacts like people do.</p>
+            <motion.div variants={fadeInUp} className="feature-card glass-panel text-left">
+              <div className="icon-wrapper"><Brain size={28} className="text-accent" /></div>
+              <h4 className="card-title-small">Cognitive Assessment</h4>
+              <p className="card-text">Deep analysis of decision-making, empathy, and interpersonal skills using advanced psychometrics.</p>
             </motion.div>
-            <motion.div variants={fadeInUp} className="feature-card bg-glass border-neon">
-              <div className="icon-wrapper"><BarChart3 size={32} className="text-neon" /></div>
-              <h4 className="card-title-small">MEASURABLE GROWTH</h4>
-              <p className="card-text">Track performance, identify gaps, prove ROI.</p>
+            <motion.div variants={fadeInUp} className="feature-card glass-panel text-left">
+              <div className="icon-wrapper"><BarChart3 size={28} className="text-accent" /></div>
+              <h4 className="card-title-small">Actionable Feedback</h4>
+              <p className="card-text">Instant, data-driven grading for students and professionals to pinpoint areas for improvement.</p>
             </motion.div>
           </div>
         </motion.section>
@@ -122,88 +161,64 @@ function App() {
             {/* Human Operations Wing */}
             <motion.div
               variants={fadeInUp}
-              className="domain-card bg-glass border-neon"
+              className="domain-card glass-panel text-left"
             >
-              <div className="icon-wrapper">
-                <Shield size={48} className="text-neon" />
+              <div className="card-header flex items-center mb-4">
+                <Shield size={32} className="text-accent mr-3" />
+                <h2 className="card-title-sm">Human Skills Wing</h2>
               </div>
-              <h2 className="card-title text-neon">HUMAN OPERATIONS WING</h2>
-              <h3 className="card-subtitle">ADVANCED HUMAN DYNAMICS</h3>
+              <h3 className="card-subtitle">Tactical & Interpersonal</h3>
               <p className="card-description">
-                Strategic interviewing. Target profiling. Rapport building.
+                Specialized training for <strong>field personnel</strong> and elite teams.
+                Simulate complex rapport building, information gathering, and high-pressure psychological maneuvering.
               </p>
-              <button className="btn-matrix" onClick={scrollToContact}>
-                INITIALIZE PROTOCOL <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
-              </button>
+              <div className="card-footer mt-auto">
+                <button className="link-btn" onClick={scrollToContact}>
+                  Initialize Protocol <ChevronRight size={16} className="ml-1 inline" />
+                </button>
+              </div>
             </motion.div>
 
             {/* Commercial Wing */}
             <motion.div
               variants={fadeInUp}
-              className="domain-card bg-glass border-neon"
+              className="domain-card glass-panel text-left"
             >
-              <div className="icon-wrapper">
-                <Briefcase size={48} className="text-neon" />
+              <div className="card-header flex items-center mb-4">
+                <Briefcase size={32} className="text-accent mr-3" />
+                <h2 className="card-title-sm">Commercial Wing</h2>
               </div>
-              <h2 className="card-title text-neon">COMMERCIAL WING</h2>
-              <h3 className="card-subtitle">HIGH-STAKES NEGOTIATION</h3>
+              <h3 className="card-subtitle">Sales & Service</h3>
               <p className="card-description">
-                High-end real estate negotiation. Objection handling. Closing psychology for luxury markets.
+                Immersive scenarios for <strong>marketing simulations</strong>, <strong>sales mastery</strong>, and <strong>customer service</strong>.
+                Train teams to handle objections and close deals.
               </p>
-              <button className="btn-matrix" onClick={scrollToContact}>
-                ACCESS MARKET DATA <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
-              </button>
+              <div className="card-footer mt-auto">
+                <button className="link-btn" onClick={scrollToContact}>
+                  Access Market Data <ChevronRight size={16} className="ml-1 inline" />
+                </button>
+              </div>
             </motion.div>
 
             {/* Assessment Wing */}
             <motion.div
               variants={fadeInUp}
-              className="domain-card bg-glass border-neon"
+              className="domain-card glass-panel text-left"
             >
-              <div className="icon-wrapper">
-                <Activity size={48} className="text-neon" />
+              <div className="card-header flex items-center mb-4">
+                <Activity size={32} className="text-accent mr-3" />
+                <h2 className="card-title-sm">Mevyx Assessment</h2>
               </div>
-              <h2 className="card-title text-neon">ASSESSMENT WING</h2>
-              <h3 className="card-subtitle">PROFESSIONAL EVALUATION</h3>
+              <h3 className="card-subtitle">Recruitment & Academic</h3>
               <p className="card-description">
-                Professional candidate assessment. Structured interviews. HR evaluation reports.
+                The gold standard for <strong>Business Schools</strong> and HR.
+                Conduct automated <strong>job interviews</strong> and evaluate candidate potential with precision.
               </p>
-              <button className="btn-matrix" onClick={scrollToContact}>
-                START EVALUATION <ChevronRight size={16} style={{ display: 'inline', verticalAlign: 'middle' }} />
-              </button>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* Differentiators */}
-        <motion.section
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <h3 className="section-title text-neon text-center">BUILT FOR YOUR MISSION</h3>
-          <div className="grid-2x2">
-            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
-              <Lock className="text-neon mb-2" size={24} />
-              <h4 className="info-title">CONFIDENTIALITY FIRST</h4>
-              <p className="info-text">Zero-knowledge architecture for classified scenarios.</p>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
-              <Target className="text-neon mb-2" size={24} />
-              <h4 className="info-title">MISSION-SPECIFIC</h4>
-              <p className="info-text">Custom scenarios built around your real challenges.</p>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
-              <Users className="text-neon mb-2" size={24} />
-              <h4 className="info-title">REALISTIC INTERACTIONS</h4>
-              <p className="info-text">Trainee performance drives scenario difficulty.</p>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="info-item bg-glass border-neon rounded-lg">
-              <LineChart className="text-neon mb-2" size={24} />
-              <h4 className="info-title">MEASURABLE OUTCOMES</h4>
-              <p className="info-text">Quantify improvement with behavioral analytics.</p>
+              <div className="card-footer mt-auto">
+                <button className="link-btn" onClick={scrollToContact}>
+                  Start Evaluation <ChevronRight size={16} className="ml-1 inline" />
+                </button>
+              </div>
             </motion.div>
           </div>
         </motion.section>
@@ -216,25 +231,25 @@ function App() {
           transition={{ duration: 1 }}
           className="main-footer section"
         >
-          <div id="contact-section" className="contact-container bg-glass border-neon">
-            <div className="logo-container-small mb-6">
-              <img src="/ChatGPT Image Nov 13, 2025, 05_57_49 PM.png" alt="MEVYX Logo" className="footer-logo" />
-            </div>
-            <h3 className="section-title text-neon">READY TO TRANSFORM TRAINING?</h3>
-            <p className="contact-text">
+          <div id="contact-section" className="contact-container glass-panel p-12 text-center">
+            <h3 className="section-title text-accent mb-4">Ready to Transform Training?</h3>
+            <p className="contact-text mb-8">
               Mevyx is available to vetted organizations. Request a confidential demo or discuss custom training solutions.
             </p>
-            <div className="contact-actions" style={{ justifyContent: 'center' }}>
-              <a href="mailto:itaikupers@gmail.com" className="btn-matrix">
-                <Mail size={18} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
-                REQUEST ACCESS
+            <div className="contact-actions flex justify-center">
+              <a href="mailto:itaikupers@gmail.com" className="btn-primary">
+                <Mail size={18} className="inline mr-2" />
+                Request Access
               </a>
             </div>
           </div>
 
-          <div className="system-status mt-8 bg-glass border-neon" style={{ padding: '1rem', borderRadius: '0.5rem', display: 'inline-flex', flexDirection: 'column' }}>
-            <p><Terminal size={14} style={{ display: 'inline', marginRight: '6px' }} /> SYSTEM STATUS: ONLINE | ENCRYPTION: AES-256</p>
-            <p className="copyright">&copy; {new Date().getFullYear()} MEVYX. ALL RIGHTS RESERVED.</p>
+          <div className="system-status mt-12 text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-black/40 border border-white/10 text-xs text-gray-400">
+              <Terminal size={12} className="mr-2 text-green-500" />
+              SYSTEM STATUS: ONLINE | ENCRYPTION: AES-256
+            </div>
+            <p className="copyright mt-4 text-gray-500 text-sm">&copy; {new Date().getFullYear()} MEVYX. ALL RIGHTS RESERVED.</p>
           </div>
         </motion.footer>
 
