@@ -26,13 +26,12 @@ npm run build
 # Remove old deployment (if it exists)
 if [ -d "$SCRIPT_DIR/dist" ]; then
     echo "Cleaning up old build files..."
-        # Copy new built files to public_html
-            echo "Copying dist files to public_html..."
-                rm -rf $PUBLIC_HTML/*
-                    cp -r $SCRIPT_DIR/dist/* $PUBLIC_HTML/
-
-                            echo "=== Deployment completed successfully ==="
-                            else
-                                echo "Error: dist directory not found after build"
-                                    exit 1
-                                    fi
+    # Copy new built files to public_html
+    echo "Copying dist files to public_html..."
+    rm -rf $PUBLIC_HTML/*
+    cp -r $SCRIPT_DIR/dist/* $PUBLIC_HTML/
+    echo "=== Deployment completed successfully ==="
+else
+    echo "Error: dist directory not found after build"
+    exit 1
+fi
