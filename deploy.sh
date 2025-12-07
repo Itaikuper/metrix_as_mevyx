@@ -1,4 +1,4 @@
-#!/bin/bash
+h#!/bin/bash
 
 # Deploy script for MEVYX
 # This script installs dependencies, builds the React app, and deploys to public_html
@@ -7,8 +7,7 @@ set -e  # Exit on any error
 
 # Get the directory where this script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PUBLIC_HTML="/home/u123456789/domains/mevyx.com/public_html"
-
+PUBLIC_HTML="/home/u929128984/domains/mevyx.com/public_html"
 echo "=== Starting MEVYX deployment ==="
 echo "Repository directory: $SCRIPT_DIR"
 echo "Public HTML directory: $PUBLIC_HTML"
