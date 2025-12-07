@@ -1,6 +1,6 @@
 h#!/bin/bash
 
-# Deploy script for MEVYX
+# Deploy script for MEVYX website
 # This script installs dependencies, builds the React app, and deploys to public_html
 
 set -e  # Exit on any error
