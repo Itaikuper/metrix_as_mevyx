@@ -23,10 +23,7 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -41,16 +38,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #050508;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0f0;
+  background: #6366f1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0a0;
+  background: #8b5cf6;
 }
 
 /* Utility Classes */
